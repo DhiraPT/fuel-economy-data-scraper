@@ -7,6 +7,9 @@ excel_file_name = input('Input file name (e.g. fuel_economy.xlsx): ')
 while excel_file_name == '':
     excel_file_name = input('Input file name (e.g. fuel_economy.xlsx): ')
 
+if not excel_file_name.endswith(".xlsx") and not excel_file_name.endswith(".csv"):
+    excel_file_name += ".xlsx"
+
 print('Scraping fuel economy data...')
 
 timestamp = int(datetime.timestamp(datetime.now()) * 1000)
